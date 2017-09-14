@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.example.org/XMLSchema">
+<xs:element name="library">
+
+<xs:complexType> 
+
+<xs:sequence>
+
+<xs:element name="books">
+
+<xs:complexType>
+
+<xs:sequence>
+
+	<xs:element name="book">
+		
+	<xs:complexType> 
+
+		<xs:sequence>
+
+			<xs:element name="author" type="personaldata">
+			<xs:complexContent>
+			<xs:restriction base="xs:string">
+			<xs:pattern value="[a-z][0-9]"/>
+			<xs:attribute name="id" type="xs:string"/>
+			</xs:restriction>
+			</xs:complexContent>
+
+			<xs:complexType name="personaldata">
+
+				<xs:sequence>
+
+					<xs:element name="name" type="xs:string"/>
+
+					<xs:element name="surname" type="xs:string"/>
+
+					<xs:element name="born" type="xs:date"/>
+
+					<xs:element name="died" type="xs:date"/>
+
+				</xs:sequence>
+
+			</xs:complexType>
+
+			<xs:element name="title" type="xs:string"/>
+
+			<xs:element name="published" type="xs:integer"/>
+
+			<xs:element name="ibn" type="xs:string" default=""/>/>
+
+		<xs:sequence>
+
+	</xs:complexType>
+		<xs:complexContent>
+		<xs:restriction base="xs:string">
+		<xs:pattern value="[a-z][0-9]"/>
+		<xs:attribute name="id" type="xs:string"/>
+		</xs:restriction>
+		</xs:complexContent>
+
+	</xs:element>
+
+</xs:sequence>
+
+</xs:complexType>
+
+</xs:element>
+
+</xs:sequence>
+
+</xs:complexType> 
+
+</xs:element>
+</xs:schema>
